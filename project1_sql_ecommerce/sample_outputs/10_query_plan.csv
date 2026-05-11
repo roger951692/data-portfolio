@@ -1,0 +1,5 @@
+id,parent,notused,detail
+11,0,0,SEARCH o USING INDEX idx_orders_date (order_date>? AND order_date<?)
+21,0,0,SEARCH c USING INTEGER PRIMARY KEY (rowid=?)
+24,0,0,SEARCH oi USING INDEX idx_order_items_order (order_id=?)
+65,0,0,USE TEMP B-TREE FOR ORDER BY

@@ -1,0 +1,11 @@
+product_id,product_name,category,units_sold,total_revenue,total_cost,gross_margin,margin_pct
+1,"Laptop Pro 15""",Electronics,6,7194.0,3900.0,3294.0,45.8
+5,"Monitor 27"" 4K",Electronics,4,2196.0,1120.0,1076.0,49.0
+7,Standing Desk,Furniture,2,1198.0,640.0,558.0,46.6
+6,Office Chair Ergonomic,Furniture,3,1047.0,585.0,462.0,44.1
+15,Noise-Cancel Headphones,Electronics,4,596.0,340.0,256.0,43.0
+3,Mechanical Keyboard,Electronics,5,475.0,275.0,200.0,42.1
+2,Wireless Mouse,Electronics,8,280.0,144.0,136.0,48.6
+4,USB-C Hub 7-in-1,Electronics,5,245.0,110.0,135.0,55.1
+14,Webcam HD 1080p,Electronics,3,237.0,135.0,102.0,43.0
+8,Desk Lamp LED,Furniture,4,180.0,112.0,68.0,37.8

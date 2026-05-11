@@ -1,0 +1,3 @@
+order_id,customer_id,customer_name,order_date,status,order_total
+7,3,Laura Martínez,2022-11-03,completed,599.0
+34,10,David Llopis,2023-06-02,completed,45.0
