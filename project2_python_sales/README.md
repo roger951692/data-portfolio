@@ -1,36 +1,21 @@
-# Sales Performance — Exploratory Data Analysis
+# Project 2 · Sales Performance EDA
 
-End-to-end EDA on a retail sales dataset covering 1,000 transactions across 2022–2023. Identifies revenue trends, seasonal patterns, channel performance and top-performing segments.
+End-to-end exploratory analysis of a retail sales dataset (1,000 transactions, 2022–2023, four categories, five regions, two channels). The analysis quantifies seasonality, channel mix, category contribution and per-transaction distribution — the kind of dashboard a junior analyst would build during their first sprint.
 
-## Objectives
+## Note on the dataset
 
-- Understand overall revenue dynamics (monthly trends, YoY)
-- Identify seasonal peaks and their business implications
-- Compare Online vs In-store channel performance
-- Analyse revenue distribution across product categories and regions
+The dataset is **synthetic**, generated in Python with documented effects: a +20% Q4 lift, ~65% Online weight and an Electronics-skewed category mix. The point of the analysis is to show **how** an analyst would surface and quantify those effects, not to claim a discovery. Every chart, table and KPI in this notebook would work the same way against real retail data.
 
-## Key Findings
+A real-world equivalent of this analysis on the Brazilian E-Commerce dataset (~100 K rows, public) is the focus of [Project 3](../project3_ecommerce_dashboard/).
 
-1. **Electronics** is the dominant category, generating ~45% of total revenue
-2. **Q4 seasonality** is significant — Oct–Dec concentrates ~28% of annual revenue
-3. **Online channel** accounts for ~65% of revenue, growing throughout 2023
-4. **Barcelona and Madrid** are the top two regions by volume
-5. Revenue per transaction varies widely by category (Books: low ticket, high volume; Electronics: high ticket, lower frequency)
+## What's inside
 
-## Structure
-
-```
-project2_python_sales/
-├── eda_sales.py                  # Main analysis script
-├── requirements.txt
-└── outputs/
-    ├── 01_monthly_revenue.png
-    ├── 02_revenue_by_category.png
-    ├── 03_seasonality_heatmap.png
-    ├── 04_channel_comparison.png
-    ├── 05_revenue_distribution.png
-    └── 06_revenue_by_region.png
-```
+| File | Purpose |
+|---|---|
+| `eda_sales.ipynb` | The analysis as a Jupyter notebook (renders well on GitHub) |
+| `eda_sales.py` | The same analysis as a runnable script (saves all PNGs to `outputs/`) |
+| `requirements.txt` | Pandas, NumPy, Matplotlib, Seaborn |
+| `outputs/` | Pre-generated charts (PNG, 110 dpi) |
 
 ## How to run
 
@@ -39,18 +24,35 @@ pip install -r requirements.txt
 python eda_sales.py
 ```
 
-Or convert to Jupyter Notebook:
+Or open `eda_sales.ipynb` in Jupyter Lab / Colab.
 
-```bash
-pip install jupytext
-jupytext --to notebook eda_sales.py
-jupyter notebook eda_sales.ipynb
-```
+## KPIs at a glance
+
+| KPI | Value |
+|---|---|
+| Total revenue | ~€513 K |
+| Transactions | 1,000 |
+| Average ticket | €513 |
+| Online channel share | 64% |
+| Q4 (Oct–Dec) share | 28% |
+| Electronics share of revenue | 71% |
+
+## Insight → Recommendation
+
+| # | Insight | Recommended action |
+|---|---|---|
+| 1 | Electronics generate 71% of revenue with the highest avg ticket (~€903) | Prioritise stock depth and promotions in this category; protect margin during sales |
+| 2 | Q4 concentrates 28% of annual revenue (Oct–Dec) | Plan inventory and acquisition spend before October; freeze low-impact projects in Q4 |
+| 3 | Online channel is 64% of revenue | Continue weighting digital acquisition and UX improvements; track channel CAC separately |
+| 4 | Electronics and Furniture show wide per-transaction spread (€50–€1,200 and €80–€700) | Test bundling and upsells; A/B "frequently bought together" placements |
+| 5 | Barcelona and Madrid lead by region | Ringfence growth experiments to these markets first, then expand once a playbook is proven |
+
+## Method
+
+The notebook follows a clean linear flow: build dataset → quality check → summary stats → trend chart → category breakdown → seasonality heatmap → channel comparison → distribution view → regional breakdown → insight table. Every chart is independent and saved as PNG so the README and any deck can pull them in directly.
 
 ## Stack
 
 - **Python 3.10+**
-- **Pandas** — data manipulation
-- **NumPy** — numerical operations
-- **Matplotlib** — base charting
-- **Seaborn** — statistical visualisation
+- **Pandas / NumPy** for data manipulation
+- **Matplotlib / Seaborn** for charts (consistent muted palette, € axis formatter)
