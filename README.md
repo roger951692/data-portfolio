@@ -12,7 +12,7 @@ Barcelona · `rogeramorinsune@icloud.com`
 
 ## About me
 
-Analyst with a rigorous scientific background — degrees in Chemistry (Universitat de Barcelona) and Mathematics (UNED, ongoing) — and 10+ years running my own projects (Gauss Online, Acadèmia Gauss). I work end-to-end with data: extracting it, cleaning it, modelling it, building dashboards, and translating the results into decisions for non-technical audiences.
+Analyst with a rigorous scientific background — degrees in Chemistry (Universitat de Barcelona) and Mathematics (UNED, ongoing) — and 5+ years running my own projects (Gauss Online, Acadèmia Gauss). I work end-to-end with data: extracting it, cleaning it, modelling it, building dashboards, and translating the results into decisions for non-technical audiences.
 
 Currently transitioning from autonomous founder to data-analyst employee. The change is from working *for myself* to working *for a team* — the technical fundamentals (SQL, Python, Power BI, Excel) are already in daily use.
 
